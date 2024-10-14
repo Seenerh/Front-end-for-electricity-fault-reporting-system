@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/adminhome.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="header-right">
+            <div class="search-container">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input type="text" class="search-bar" placeholder="Search">
+            </div>
+            <div class="notification-icon">
+                <span class="material-symbols-outlined">notifications</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" id="report-link"><span class="material-symbols-outlined">report</span>Reports</a></li>
+            <li><a href="#" id="analysis-link"><span class="material-symbols-outlined">analytics</span>Analysis</a></li>
+            <li><a href="adminLogin.html"><span class="material-symbols-outlined">logout</span>Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-count" id="unreadReports">3</div>
+                <p>Unread Reports</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-count" id="repliedReports">97</div>
+                <p>Replied Reports</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-count" id="totalReports">100</div>
+                <p>All Reports</p>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+    <main class="dashboard-content">
+        <!-- Reports Section -->
+        <div id="report-section" class="reports-section">
+            <h2>All Reports</h2>
+            <div id="allReports">
+                <!-- Reports will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+        <!-- Analysis Section (Make sure it's outside the report section) -->
+        <div id="analysis-section" class="container" style="display: none;">
+            <!-- Pie Charts Section -->
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <canvas id="pieChart1"></canvas>
+                    <p>Analysis On Locations</p>
+                </div>
+                <div class="pie-chart">
+                    <canvas id="pieChart2"></canvas>
+                    <p>Analysis On Feedback</p>
+                </div>
+            </div>
+
+            <!-- Bar Chart Section -->
+            <div class="bar-chart-container">
+                <canvas id="barChart"></canvas>
+                <p>Monthly Analysis From Hostel Reports</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/analysischart.js"></script>
+    <script src="scripts/adminhome.js"></script>
+</body>
+</html>

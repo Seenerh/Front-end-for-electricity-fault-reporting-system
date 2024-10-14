@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    color: white;
+    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+}
+/* Container to hold input and icon */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Search icon styles */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa; /* Color of the icon */
+    font-size: 20px;
+}
+/* Input field styles */
+.search-bar {
+    width: 200px;
+    padding: 10px 10px 10px 35px; /* Padding to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Placeholder styles */
+.search-bar::placeholder {
+    color: #aaa;
+    font-size: 15px;
+    opacity: 1; /* For older browsers */
+}
+
+/* Notification icon style */
+.notification-icon {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #F4F4F4;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    padding-top: 20px;
+    border-radius: 5px;
+   
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    /* border: 2px solid red; */
+    background-color: floralwhite;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.sidebar ul li a {
+    color: #15AE08;
+    text-decoration: none;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar ul li a .material-symbols-outlined {
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.sidebar ul li a:hover{
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    color: white;
+}
+
+.sidebar ul li a .icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul li a .icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    margin-left: 220px;  /* Adjusted for sidebar */
+    padding: 80px 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+/* Stats Section */
+.stats-section {
+    position: fixed;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item p {
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    /* border: 2px solid red; */
+    padding: 15px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.stat-count {
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #15AE08;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--orange-main, #EBA214);
+    margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container {
+    padding-left: 400px;
+    
+
+}
+
+/* Display pie charts side by side */
+.pie-chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Style for each pie chart */
+.pie-chart {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Ensure bar chart is on a new line */
+.bar-chart-container {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+}
+
+canvas {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    max-height: 300px;
+}
+
+
+/* Reports Section */
+
+.reports-section {
+    width: 100%;  
+    margin-left: 50%; 
+    padding: 20px;
+    
+}
+
+.reports-section h2 {
+    margin-bottom: 20px;
+    margin-left: 40%;
+    color: #999;
+    font-size: 22px;
+    
+}
+
+.report-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-icon {
+    background-color: #ffffff;
+    color: #15AE08;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--orange-main, #EBA214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.report-details{
+    margin-right: 200px;
+    /* border: 3px solid red; */
+}
+.report-details h4 {
+    font-size: 16px;
+    color: #666;
+}
+
+.report-details .complaint {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    
+}
+.report-details .hostel{
+    color: #15AE08;
+    font-size: 14px;
+}
+.report-details small {
+    color: #999;
+}
+
+.report-feedback .feedback-btn {
+    background: #306E70;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.report-feedback .feedback-btn:hover {
+    background-color: #565EA6;
+}
+.feedback-btn {
+    background: #306E70;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;  /* Ensures the link looks like a button */
+}
+
+.feedback-btn:hover {
+    background-color: #565EA6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 60px 10px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .stats-section {
+        width: 100%;
+    }
+
+    .dashboard-header {
+        padding: 10px;
+    }
+}

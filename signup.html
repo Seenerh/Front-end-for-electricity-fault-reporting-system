@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles/signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="left-section">
+            <img src="images/abu logo.png" alt="School Logo" class="logo">
+            <h1>Ahmadu Bello University</h1>
+            <p>Electricity Fault Reporting System (EFRS)</p>
+        </div>
+        <div class="right-section">
+            <form class="signup-form" id="signup-form">
+                <h2>Registration</h2>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="regNumber" placeholder="Reg. Number" required>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+                <div class="loading-spinner" id="loadingSpinner"></div> <!-- Loading spinner -->
+                <p>Have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/signup.js"></script>
+</body>
+</html>

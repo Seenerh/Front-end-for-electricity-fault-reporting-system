@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles/feedback.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <img src="images/abu logo.png" alt="Logo" class="logo">
+            <h1>Electricity Fault Reporting System (EFRS)</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="dashboard-content">
+        <div class="issue-container">
+            <div class="header-right">
+                <button class="back-btn" onclick="window.location.href='userdashboard.html';">
+                    <span class="material-symbols-outlined">
+                      arrow_back
+                    </span>
+                </button>
+            </div>
+
+            <!-- Dynamic Report Title -->
+            <h2 id="reportTitle">Report Title</h2>
+
+            <!-- User Report -->
+            <div class="report-card">
+                <div class="report-card-left">
+                    <div class="profile-circle" id="reportIcon">F</div>
+                </div>
+                <div class="report-card-right">
+                    <p id="reportDescription">Description of the issue will go here.</p>
+                    <span class="report-time" id="reportTime">Time of report</span>
+                </div>
+            </div>
+
+            <!-- No Feedback Yet Section -->
+            <div class="no-feedback">
+                <p>No Feedback Yet...</p>
+                <div class="feedback-icon">
+                    <span class="material-symbols-outlined">
+                        feedback
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript to load dynamic content -->
+    <script>
+        // Get the selected report from localStorage
+        const selectedReport = JSON.parse(localStorage.getItem('selectedReport'));
+
+        if (selectedReport) {
+            // Populate the placeholders with the actual data from the selected report
+            document.getElementById('natureOfFault').innerText = selectedReport.natureOfFault;
+            document.getElementById('natureOfFault').innerText = selectedReport.natureOfFault.charAt(0).toUpperCase();
+            document.getElementById('description').innerText = selectedReport.description;
+
+            // Assuming you have a 'createdAt' or similar timestamp field in the report object
+            document.getElementById('reportTime').innerText = formatTimeAgo(selectedReport.createdAt);
+        } else {
+            // If no report is found, display a message or redirect the user
+            document.querySelector('.issue-container').innerHTML = '<p>No report data found. Please go back and select a report.</p>';
+        }
+
+        // Function to format time ago (like "2 days ago")
+        function formatTimeAgo(timestamp) {
+            const now = new Date();
+            const reportDate = new Date(timestamp);
+            const timeDifference = Math.abs(now - reportDate);
+            const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            if (daysAgo === 0) return "Today";
+            if (daysAgo === 1) return "1 Day Ago";
+            return `${daysAgo} Days Ago`;
+        }
+    </script>
+
+</body>
+</html>

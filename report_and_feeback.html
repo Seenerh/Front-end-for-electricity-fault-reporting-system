@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporting and Feedback</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/report_and_feedback.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Reporting And Feedback</h1>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn" onclick="window.location.href='adminhome.html'">
+        <span class="material-symbols-outlined">arrow_back</span>
+    </div>
+
+           <!-- Main Content Section -->
+<div class="report-section">
+    <div class="report-details">
+        <!-- Report Title -->
+        <h2 id="reportTitle">Low Current</h2>
+        <!-- Report Location -->
+        <p class="location" id="reportLocation">Shehu Idris Hostel <br> Block B Room 12</p>
+        <div class="reporting">
+            <!-- Report Description -->
+            <p class="report-text" id="reportDescription">
+                The lights in my room have been dim for the past two days. Even when all the lights are turned on, the room is not well-lit, making it difficult to read or study. I suspect there might be an issue with the electrical wiring or the light fixtures themselves. Please address this issue as soon as possible.
+            </p>
+            <!-- Report Time -->
+            <p class="report-time" id="reportTime">3 Days Ago</p>
+        </div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="feedback-section">
+        <div class="feedback-card">
+            <!-- Feedback Text -->
+            <p class="feedback-text" id="feedbackMessage">
+                Thank you for bringing this issue to our attention. We have dispatched technicians to address the problem, and they are currently working to resolve it. We appreciate your patience and understanding.
+            </p>
+            <!-- Feedback Time -->
+            <p class="feedback-time" id="feedbackTime">8 Hours Ago</p>
+        </div>
+
+        <!-- Feedback Input Section -->
+        <div class="feedback-input">
+            <textarea id="addFeedback" placeholder="Add Feedback"></textarea>
+            <button id="sendBtn">
+                <span class="material-symbols-outlined">send</span> Send
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script src="scripts/report_and_feedback.js"></script>
+</body>
+</html>

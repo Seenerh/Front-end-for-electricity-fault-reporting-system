@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(21, 78, 24, 0.726);
+}
+
+.left-section {
+    background: linear-gradient(90deg, rgba(21, 174, 8, 0.3) 0%, rgba(86, 94, 166, 0.3) 100%), 
+    url('../images/Aug-25-electrician-school.jpg');
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+    color: #f4f4f4; 
+}
+
+.left-section h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.left-section p {
+    font-size: 16px;
+}
+
+.right-section {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-form button {
+    padding: 10px;
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #003300;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-form a {
+    color: #004d00;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+/* Basic styles for loading spinner */
+.loading-spinner {
+    display: none; /* Hidden by default */
+    border: 2px solid #f3f3f3; /* Light gray */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%; /* Circular spinner */
+    width: 20px; /* Spinner size */
+    height: 20px; /* Spinner size */
+    animation: spin 0.6s linear infinite; /* Spin animation */
+    margin: 10px auto; /* Center the spinner below the button */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.login-container {
+    position: relative; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        padding: 20px;
+    }
+
+    .right-section {
+        padding: 20px;
+    }
+}

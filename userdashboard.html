@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/userdashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <img src="images/abu logo.png" alt="School Logo" class="logo">
+            <h1>Electricity Fault Reporting System (EFRS)</h1>
+        </div>
+        <div class="header-right">
+            <p>Welcome <span id="userName">User</span></p>
+        </div>
+        
+    </header>
+
+    <div class="dashboard-container">
+        <div class="left-section">
+            <form class="report-form">
+                <h3>Electricity Faulty In Your Hostel?</h3>
+                <label for="natureOfFault">Nature Of Fault</label>
+                <input type="text" id="natureOfFault" placeholder="Low Light" required>
+
+                <label for="description">Describe Fault</label>
+                <textarea id="description" placeholder="50 Words Max..." required></textarea>
+
+                <label for="hostel">Hostel</label>
+                <select id="hostel" required>
+                    <option value="" disabled selected>Select Hostel</option>
+                    <option value="Hostel A">Icsa/Ramat</option>
+                    <option value="Hostel B">Dangote</option>
+                    <option value="Hostel C">Shehu Idris</option>
+                    <option value="Hostel D">Dan Fadio</option>
+                    <option value="Hostel E">Amina</option>
+                    <option value="Hostel F">Sulaiman</option>
+                    <option value="Hostel G">Ribado</option>
+                </select>
+
+                <label for="hostelBlock">Block</label>
+                <select id="hostelBlock" required>
+                    <option value="" disabled selected>Select Block</option>
+                    <option value="Block 1">Block A</option>
+                    <option value="Block 2">Block B</option>
+                    <option value="Block 3">Block C</option>
+                    <option value="Block 4">Block D</option>
+                    <option value="Block 5">Block E</option>
+                    <option value="Block 6">Block F</option>
+                    <option value="Block 7">Block G</option>
+                    <option value="Block 8">Block H</option>
+                </select>
+
+                <label for="roomNumber">Room No.</label>
+                <input type="text" class="roomNumber" placeholder="C12" required>
+
+                <button type="submit">Send Report</button>
+                <a href="home.html" class="logout">Logout</a>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <h3>Previous Reports</h3>
+            <div class="reports-list">
+                <div class="report-item">
+                    <div class="report-icon">L</div>
+                    <div class="report-details">
+                        <h4>Low Current</h4>
+                        <p>The Lighting In The Room Has Been Dim For The Past Few Days.</p>
+                        <p class="time">5 Days Ago</p>
+                    </div>
+                </div>
+
+                <div class="report-item">
+                    <div class="report-icon">F</div>
+                    <div class="report-details">
+                        <h4>Fallen Pole</h4>
+                        <p>The Pole Near The Main Entrance To Dormitory 10 Has Fallen.</p>
+                        <p class="time">1 Week Ago</p>
+                    </div>
+                </div>
+
+                <!-- Add more report items as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="scripts/userdashboard.js"></script>
+</body>
+</html>

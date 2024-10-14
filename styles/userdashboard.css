@@ -1,0 +1,247 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* Space for the fixed header */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent the body from scrolling */
+}
+
+/* Header styles */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps the header on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    mix-blend-mode: multiply;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    color: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+}
+
+.header-right p {
+    font-size: 16px;
+    margin-right: 10%;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: calc(100vh - 60px); /* Full height minus the header height */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section (Form) */
+.left-section {
+    width: 40%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Enable vertical scroll */
+    height: 100%; /* Ensure full height */
+}
+
+
+.report-form h3 {
+    margin-bottom: 15px;
+    background-color: #f0f0f0;
+    color: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+}
+
+.report-form label {
+    margin: 10px 0 5px;
+    display: block;
+    font-size: 14px;
+}
+
+.report-form input, 
+.report-form select {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #15AE08;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.room-number{
+    width: 85%;
+    border: 1px solid #15AE08;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.report-form textarea {
+    width: 80%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #15AE08;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.report-form button {
+    width: 85%;
+    padding: 10px;
+    background: linear-gradient(90deg, #15AE08 0%, #565EA6 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.report-form button:hover {
+    background-color: #43b643;
+}
+
+.report-form .logout {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #004d00;
+    text-decoration: none;
+}
+
+.report-form .logout:hover {
+    text-decoration: underline;
+}
+
+/* Right Section (Previous Reports) */
+.right-section {
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scroll */
+    height: 100%; /* Ensure full height */
+}
+
+.right-section h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reports-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.report-item {
+    display: flex;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    gap: 20px;
+}
+
+.report-icon {
+    background-color: #565EA6;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.report-details h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.report-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.report-details .time {
+    color: #999;
+    font-size: 12px;
+}
+
+/* Style for the clickable report item */
+.report-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Maintain the default text color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.report-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.report-item:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.report-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .report-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .report-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
